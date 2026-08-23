@@ -1,0 +1,44 @@
+name: Windows CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    runs-on: windows-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+
+      - name: Set up .NET 8
+        uses: actions/setup-dotnet@26b0ec14cb23fa6904739307f278c14f94c95bf1 # v5
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Restore
+        run: dotnet restore GaugeTrail.sln
+
+      - name: Build
+        run: dotnet build GaugeTrail.sln -c Release --no-restore --nologo
+
+      - name: Self-test
+        run: dotnet run --project tests/GaugeTrail.SelfTest/GaugeTrail.SelfTest.csproj -c Release --no-build
+
+      - name: Publish Windows x64
+        run: >
+          dotnet publish src/GaugeTrail.Desktop/GaugeTrail.Desktop.csproj
+          -c Release
+          -r win-x64
+          --self-contained true
+          -p:PublishSingleFile=true
+          -p:PublishReadyToRun=true
+          -p:IncludeNativeLibrariesForSelfExtract=true
+          -o artifacts/publish/win-x64

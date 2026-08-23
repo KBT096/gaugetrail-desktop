@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GaugeTrail.Core", "src\GaugeTrail.Core\GaugeTrail.Core.csproj", "{4C9DEBC3-4212-41A0-A41F-6E696DC39BC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GaugeTrail.Desktop", "src\GaugeTrail.Desktop\GaugeTrail.Desktop.csproj", "{2A84C17D-12E7-46FA-B93D-37A23E8320D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GaugeTrail.SelfTest", "tests\GaugeTrail.SelfTest\GaugeTrail.SelfTest.csproj", "{47C85069-0524-4E30-B9A9-14E073DF0E3E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C9DEBC3-4212-41A0-A41F-6E696DC39BC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C9DEBC3-4212-41A0-A41F-6E696DC39BC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C9DEBC3-4212-41A0-A41F-6E696DC39BC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C9DEBC3-4212-41A0-A41F-6E696DC39BC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A84C17D-12E7-46FA-B93D-37A23E8320D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A84C17D-12E7-46FA-B93D-37A23E8320D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A84C17D-12E7-46FA-B93D-37A23E8320D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A84C17D-12E7-46FA-B93D-37A23E8320D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47C85069-0524-4E30-B9A9-14E073DF0E3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47C85069-0524-4E30-B9A9-14E073DF0E3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47C85069-0524-4E30-B9A9-14E073DF0E3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47C85069-0524-4E30-B9A9-14E073DF0E3E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
