@@ -2,7 +2,7 @@
 
 # GaugeTrail Desktop
 
-### 让每一条测量值，都带着出处、解释和下一步
+### 让每一条测量值 都带着意义
 
 [![Windows CI](https://github.com/KBT096/gaugetrail-desktop/actions/workflows/ci.yml/badge.svg)](https://github.com/KBT096/gaugetrail-desktop/actions/workflows/ci.yml)
 [![Release](https://img.shields.io/github/v/release/KBT096/gaugetrail-desktop?display_name=tag&sort=semver)](https://github.com/KBT096/gaugetrail-desktop/releases/latest)
@@ -10,7 +10,7 @@
 [![.NET 8](https://img.shields.io/badge/.NET-8.0-512BD4)](https://dotnet.microsoft.com/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-62D6C7)](LICENSE)
 
-**原生 Windows 桌面应用 · 完全离线 · 无需数据库 · 不上传测量数据**
+**原生 Windows 桌面应用** · 快速部署 · 稳定便捷可靠
 
 [下载体验](https://github.com/KBT096/gaugetrail-desktop/releases/latest) ·
 [快速上手](docs/QUICK_START.md) ·
@@ -22,8 +22,6 @@
 
 ## 0. 先和大家打个招呼吧 👋
 
-### 你是谁？
-
 我是 **KBT096**，GaugeTrail Desktop 的发起人、作者和维护者。
 
 我没有想把这个 Demo 写成一套“什么都能做”的大型质量平台，也不想把统计结果包装成神奇的 AI 结论。这个项目最初的念头其实很简单：
@@ -33,21 +31,6 @@
 表格很擅长存数字，却不一定会告诉我们某个点为什么值得检查；控制图很有用，但第一次接触的人常常先被术语挡在门外；专业软件能力很强，却未必适合每一次临时分析和小规模验证。
 
 于是就有了 GaugeTrail Desktop。它把一列测量值放进一个原生 Windows 窗口里：数据在左边留下时间、批次和来源，图表在中间呈现变化，规则信号在右边说明“为什么被标记”，后续行动再沿着状态一步步留下记录。
-
-### 你是怎么用 Codex 把 Demo 做出来的？
-
-我先给 Codex 看了一套优秀 SPC 项目的展示方式：不要只罗列技术名词，要把“谁会用、为什么做、怎样体验、哪里踩过坑”讲成一段读得下去的故事。
-
-但真正开始开发时，我们没有照搬它的 Web 架构，也没有复制它的功能数字。我们重新做了几个取舍：
-
-1. **从 Web 改成 Windows 原生桌面端**：数据原本就常在 Windows 和 Excel 旁边，双击应用比部署服务更直接。
-2. **从“大而全”改成“一条路径走通”**：首版只做好连续测量值、I 图、过程能力、规则解释和行动闭环。
-3. **先写边界，再写功能**：控制限不是规格限，统计信号不是根因，Demo 也不等于通过行业认证。
-4. **用可重复验证代替口头保证**：核心算法、CSV、JSON、报告和异常输入都进入自测，桌面窗口也在真实 Windows 环境启动检查。
-
-开发过程中经历了“先能算、再能看、最后让人读得懂”的几轮调整。比如第一版演示数据触发了 33 条信号，数学上并非错误，但连续滑动窗口造成了明显的信息噪声。最终改成：同一规则连续命中的重叠窗口合并为一次事件，同时保留首次触发窗口的最后一点。
-
-这正是 GaugeTrail 想表达的原则：**工具不是为了显得聪明，而是为了让判断更清楚。**
 
 ---
 
@@ -235,11 +218,11 @@ timestamp,value,batch,source,note
 
 ---
 
-## 4. Codex 实践过程
+## 4. 开发与验证过程
 
-整个 v0.1.0 由 KBT096 提出方向，并与 Codex 协作完成设计、编码、测试、桌面检查、文档和发布。
+v0.1.0 围绕“原生桌面、离线分析、解释优先、行动闭环”四个方向完成设计、编码、测试、桌面检查和发布。
 
-| 阶段 | 我们要解决的事 | Codex 实际参与内容 |
+| 阶段 | 要解决的事 | 实现结果 |
 |---|---|---|
 | 参考分析 | 看懂参考项目为什么“读起来像一个完整作品” | 拆解人物开场、痛点、体验路径、实践过程和功能详解的叙事结构 |
 | 产品取舍 | 避免复制 Web 方案 | 定义 Windows 原生、离线、解释优先、行动闭环四个差异点 |
@@ -441,6 +424,6 @@ GaugeTrail Desktop 没有复制该项目源码、界面资产、项目名称、�
 
 **数据留在电脑里，判断留给真正了解现场的人。**
 
-Made by **KBT096** with Codex.
+Made by **KBT096**.
 
 </div>
