@@ -1,6 +1,6 @@
 ﻿param(
     [ValidatePattern('^\d+\.\d+\.\d+$')]
-    [string]$Version = '0.1.0'
+    [string]$Version = '0.1.1'
 )
 
 $ErrorActionPreference = 'Stop'
@@ -12,6 +12,7 @@ $packageName = "GaugeTrail-Desktop-v$Version-win-x64"
 $stagingDirectory = [System.IO.Path]::GetFullPath((Join-Path $artifactsRoot $packageName))
 $zipPath = [System.IO.Path]::GetFullPath((Join-Path $artifactsRoot "$packageName.zip"))
 $checksumPath = [System.IO.Path]::GetFullPath((Join-Path $artifactsRoot 'SHA256SUMS.txt'))
+$releaseNotesPath = [System.IO.Path]::GetFullPath((Join-Path $repositoryRoot "docs\RELEASE_NOTES_v$Version.md"))
 
 function Assert-ArtifactChild {
     param([Parameter(Mandatory)][string]$Path)
@@ -26,6 +27,10 @@ Assert-ArtifactChild -Path $publishDirectory
 Assert-ArtifactChild -Path $stagingDirectory
 Assert-ArtifactChild -Path $zipPath
 Assert-ArtifactChild -Path $checksumPath
+
+if (-not (Test-Path -LiteralPath $releaseNotesPath -PathType Leaf)) {
+    throw "缺少版本说明文件：$releaseNotesPath"
+}
 
 New-Item -ItemType Directory -Path $artifactsRoot -Force | Out-Null
 
@@ -72,7 +77,7 @@ $stagingDocs = Join-Path $stagingDirectory 'docs'
 $stagingExamples = Join-Path $stagingDirectory 'examples'
 New-Item -ItemType Directory -Path $stagingDocs, $stagingExamples -Force | Out-Null
 Copy-Item -LiteralPath (Join-Path $repositoryRoot 'docs\QUICK_START.md') -Destination $stagingDocs
-Copy-Item -LiteralPath (Join-Path $repositoryRoot 'docs\RELEASE_NOTES_v0.1.0.md') -Destination $stagingDocs
+Copy-Item -LiteralPath $releaseNotesPath -Destination $stagingDocs
 Copy-Item -LiteralPath (Join-Path $repositoryRoot 'examples\sample-line.csv') -Destination $stagingExamples
 
 $exeHash = (Get-FileHash -LiteralPath (Join-Path $stagingDirectory 'GaugeTrail.Desktop.exe') -Algorithm SHA256).Hash.ToLowerInvariant()

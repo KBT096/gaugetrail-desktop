@@ -8,7 +8,7 @@
     <LangVersion>12.0</LangVersion>
     <AssemblyName>GaugeTrail.Desktop</AssemblyName>
     <RootNamespace>GaugeTrail.Desktop</RootNamespace>
-    <Version>0.1.0</Version>
+    <Version>0.1.1</Version>
     <Authors>KBT096</Authors>
     <Description>Offline-first Windows desktop SPC workspace with explainable signals and action traceability.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
