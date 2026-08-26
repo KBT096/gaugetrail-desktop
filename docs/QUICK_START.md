@@ -1,12 +1,12 @@
 # GaugeTrail Desktop 快速上手
 
 - 作者：KBT096
-- 版本：v0.1.0
+- 版本：v0.1.1
 
 ## 1. 下载与启动
 
-1. 打开 [v0.1.0 Release](https://github.com/KBT096/gaugetrail-desktop/releases/tag/v0.1.0)；
-2. 下载 `GaugeTrail-Desktop-v0.1.0-win-x64.zip`；
+1. 打开 [最新 Release](https://github.com/KBT096/gaugetrail-desktop/releases/latest)；
+2. 下载 `GaugeTrail-Desktop-v0.1.1-win-x64.zip`；
 3. 解压到任意可写目录；
 4. 双击 `GaugeTrail.Desktop.exe`。
 
@@ -76,4 +76,4 @@ timestamp,value,batch,source,note
 
 ## 7. 使用边界
 
-GaugeTrail Desktop v0.1.0 是可运行 Demo，不是经过行业认证的产品放行系统。正式使用前，请由质量专业人员确认抽样方案、规则集、控制图类型和计量系统。
+GaugeTrail Desktop v0.1.1 是可运行 Demo，不是经过行业认证的产品放行系统。正式使用前，请由质量专业人员确认抽样方案、规则集、控制图类型和计量系统。

@@ -14,7 +14,7 @@
 
 [下载体验](https://github.com/KBT096/gaugetrail-desktop/releases/latest) ·
 [快速上手](docs/QUICK_START.md) ·
-[版本说明](docs/RELEASE_NOTES_v0.1.0.md)
+[版本说明](docs/RELEASE_NOTES_v0.1.1.md)
 
 </div>
 
@@ -88,7 +88,7 @@ flowchart LR
 
 ### 1.4 主要功能
 
-| 模块 | v0.1.0 已实现 |
+| 模块 | v0.1.1 已实现 |
 |---|---|
 | 过程总览 | 数据点、均值、Cpk、规则信号、解释卡片、最近信号 |
 | 趋势图 | 单值 I 图；中心线、控制限和规格限同图展示 |
@@ -141,7 +141,7 @@ flowchart LR
 
 在我们的设想里，测量数据通常刚从 Excel、量具导出文件或桌面文件夹里出来。原生电脑端可以自然地支持文件对话框、CSV 拖放、本地目录和自包含 EXE，同时避免用户误以为数据正在通过网页发送到某个服务器。
 
-这个选择也意味着首版只服务 Windows 10/11 x64，不追求跨平台。对 v0.1.0 来说，**把一个平台做好并讲清楚，比同时画出三个平台的路线图更重要。**
+这个选择也意味着首版只服务 Windows 10/11 x64，不追求跨平台。对当前版本来说，**把一个平台做好并讲清楚，比同时画出三个平台的路线图更重要。**
 
 ### 2.4 我们主动放弃了什么？
 
@@ -154,7 +154,7 @@ flowchart LR
 - 没有宣称通过 AIAG、VDA 或其他行业认证；
 - 没有把演示验证描述成生产环境验证。
 
-这些内容以后可以逐项增加，但 v0.1.0 的边界必须先说清楚。
+这些内容以后可以逐项增加，但当前版本的边界必须先说清楚。
 
 ---
 
@@ -165,7 +165,7 @@ flowchart LR
 前往 [最新 Release](https://github.com/KBT096/gaugetrail-desktop/releases/latest)，下载：
 
 ```text
-GaugeTrail-Desktop-v0.1.0-win-x64.zip
+GaugeTrail-Desktop-v0.1.1-win-x64.zip
 ```
 
 然后：
@@ -175,7 +175,7 @@ GaugeTrail-Desktop-v0.1.0-win-x64.zip
 3. 首次启动会自动载入“A 线 · 轴套外径”演示工作区；
 4. 不需要管理员权限，不需要数据库，也不需要联网。
 
-> Windows SmartScreen 可能会提示这是尚未积累信誉的新应用。v0.1.0 暂未购买代码签名证书；请只从本仓库 Release 下载，并核对 Release 中公布的 SHA-256。
+> Windows SmartScreen 可能会提示这是尚未积累信誉的新应用。当前版本暂未购买代码签名证书；请只从本仓库 Release 下载，并核对 Release 中公布的 SHA-256。
 
 ### 3.2 五分钟体验路径
 
@@ -220,7 +220,7 @@ timestamp,value,batch,source,note
 
 ## 4. 开发与验证过程
 
-v0.1.0 围绕“原生桌面、离线分析、解释优先、行动闭环”四个方向完成设计、编码、测试、桌面检查和发布。
+v0.1.1 围绕“原生桌面、离线分析、解释优先、行动闭环”四个方向完成设计、编码、测试、桌面检查和发布。
 
 | 阶段 | 要解决的事 | 实现结果 |
 |---|---|---|
@@ -350,7 +350,7 @@ dotnet run --project tests/GaugeTrail.SelfTest/GaugeTrail.SelfTest.csproj -c Rel
 
 ## 7. 验证情况
 
-v0.1.0 发布前完成：
+v0.1.1 发布前完成：
 
 - Release 构建：0 警告、0 错误；
 - 核心自测：统计量、8 条规则、窗口合并、CSV 引号字段、错误行隔离、JSON 回读、报告、无效规格拒绝；
@@ -365,13 +365,13 @@ v0.1.0 发布前完成：
 - 通过生产环境、计量系统或行业标准验证；
 - 可以直接用于产品放行。
 
-详细记录见 [v0.1.0 Release Notes](docs/RELEASE_NOTES_v0.1.0.md)。
+详细记录见 [v0.1.1 Release Notes](docs/RELEASE_NOTES_v0.1.1.md)。
 
 ---
 
 ## 8. 当前限制与后续方向
 
-### v0.1.0 当前限制
+### v0.1.1 当前限制
 
 - 仅支持连续数值型测量数据；
 - 只有一个活动工作区；
@@ -400,7 +400,7 @@ v0.1.0 发布前完成：
 |---|---|
 | [README.md](README.md) | 项目故事、功能、体验路径、实现与边界 |
 | [QUICK_START.md](docs/QUICK_START.md) | 下载、启动、导入和导出 |
-| [RELEASE_NOTES_v0.1.0.md](docs/RELEASE_NOTES_v0.1.0.md) | 版本内容、验证与已知限制 |
+| [RELEASE_NOTES_v0.1.1.md](docs/RELEASE_NOTES_v0.1.1.md) | 版本内容、验证与已知限制 |
 | [SECURITY.md](SECURITY.md) | 本地数据与安全问题报告方式 |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | 参与开发与提交验证要求 |
 
