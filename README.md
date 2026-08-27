@@ -14,7 +14,7 @@
 
 [下载体验](https://github.com/KBT096/gaugetrail-desktop/releases/latest) ·
 [快速上手](docs/QUICK_START.md) ·
-[版本说明](docs/RELEASE_NOTES_v0.1.1.md)
+[版本说明](docs/RELEASE_NOTES_v0.1.2.md)
 
 </div>
 
@@ -88,7 +88,7 @@ flowchart LR
 
 ### 1.4 主要功能
 
-| 模块 | v0.1.1 已实现 |
+| 模块 | v0.1.2 已实现 |
 |---|---|
 | 过程总览 | 数据点、均值、Cpk、规则信号、解释卡片、最近信号 |
 | 趋势图 | 单值 I 图；中心线、控制限和规格限同图展示 |
@@ -165,7 +165,7 @@ flowchart LR
 前往 [最新 Release](https://github.com/KBT096/gaugetrail-desktop/releases/latest)，下载：
 
 ```text
-GaugeTrail-Desktop-v0.1.1-win-x64.zip
+GaugeTrail-Desktop-v0.1.2-win-x64.zip
 ```
 
 然后：
@@ -220,7 +220,7 @@ timestamp,value,batch,source,note
 
 ## 4. 开发与验证过程
 
-v0.1.1 围绕“原生桌面、离线分析、解释优先、行动闭环”四个方向完成设计、编码、测试、桌面检查和发布。
+v0.1.2 围绕“原生桌面、离线分析、解释优先、行动闭环”四个方向完成设计、编码、测试、桌面检查和发布。
 
 | 阶段 | 要解决的事 | 实现结果 |
 |---|---|---|
@@ -350,7 +350,7 @@ dotnet run --project tests/GaugeTrail.SelfTest/GaugeTrail.SelfTest.csproj -c Rel
 
 ## 7. 验证情况
 
-v0.1.1 发布前完成：
+v0.1.2 发布前完成：
 
 - Release 构建：0 警告、0 错误；
 - 核心自测：统计量、8 条规则、窗口合并、CSV 引号字段、错误行隔离、JSON 回读、报告、无效规格拒绝；
@@ -365,13 +365,13 @@ v0.1.1 发布前完成：
 - 通过生产环境、计量系统或行业标准验证；
 - 可以直接用于产品放行。
 
-详细记录见 [v0.1.1 Release Notes](docs/RELEASE_NOTES_v0.1.1.md)。
+详细记录见 [v0.1.2 Release Notes](docs/RELEASE_NOTES_v0.1.2.md)。
 
 ---
 
 ## 8. 当前限制与后续方向
 
-### v0.1.1 当前限制
+### v0.1.2 当前限制
 
 - 仅支持连续数值型测量数据；
 - 只有一个活动工作区；
@@ -400,7 +400,7 @@ v0.1.1 发布前完成：
 |---|---|
 | [README.md](README.md) | 项目故事、功能、体验路径、实现与边界 |
 | [QUICK_START.md](docs/QUICK_START.md) | 下载、启动、导入和导出 |
-| [RELEASE_NOTES_v0.1.1.md](docs/RELEASE_NOTES_v0.1.1.md) | 版本内容、验证与已知限制 |
+| [RELEASE_NOTES_v0.1.2.md](docs/RELEASE_NOTES_v0.1.2.md) | 版本内容、验证与已知限制 |
 | [SECURITY.md](SECURITY.md) | 本地数据与安全问题报告方式 |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | 参与开发与提交验证要求 |
 
