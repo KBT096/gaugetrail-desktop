@@ -1,6 +1,6 @@
 ﻿param(
     [ValidatePattern('^\d+\.\d+\.\d+$')]
-    [string]$Version = '0.1.1'
+    [string]$Version = '0.1.2'
 )
 
 $ErrorActionPreference = 'Stop'
@@ -72,6 +72,7 @@ New-Item -ItemType Directory -Path $stagingDirectory -Force | Out-Null
 Copy-Item -LiteralPath $executable -Destination $stagingDirectory
 Copy-Item -LiteralPath (Join-Path $repositoryRoot 'README.md') -Destination $stagingDirectory
 Copy-Item -LiteralPath (Join-Path $repositoryRoot 'LICENSE') -Destination $stagingDirectory
+Copy-Item -LiteralPath (Join-Path $repositoryRoot 'SECURITY.md') -Destination $stagingDirectory
 
 $stagingDocs = Join-Path $stagingDirectory 'docs'
 $stagingExamples = Join-Path $stagingDirectory 'examples'
